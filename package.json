@@ -32,9 +32,7 @@
     "prepare": "npm run build",
     "prepublishOnly": "npm run lint && npm run build",
     "preversion": "npm run lint && npm run check-git-status",
-    "version": "npm run format && git add . && npm version patch && git push && git push --tags",
-    "postversion": "",
-    "check-git-status": "git diff --quiet && git diff --cached --quiet || (echo 'Git working directory not clean'; exit 1)"
+    "version": "npm version patch"
   },
   "scriptsInfo": {
     "check-git-status": "Check if the Git working directory is clean",
