@@ -1,7 +1,7 @@
 {
   "name": "react-cheeky-components",
   "private": false,
-  "version": "0.0.5",
+  "version": "0.0.6",
   "license": "MIT",
   "type": "module",
   "main": "dist/index.umd.js",
@@ -31,9 +31,15 @@
     "preview": "vite preview",
     "prepare": "npm run build",
     "prepublishOnly": "npm run lint && npm run build",
-    "preversion": "npm run lint",
+    "preversion": "npm run lint && npm run check-git-status",
     "version": "npm run format && git add . && npm version patch && git push && git push --tags",
-    "postversion": ""
+    "postversion": "",
+    "check-git-status": "git diff --quiet && git diff --cached --quiet || (echo 'Git working directory not clean'; exit 1)"
+
+  },
+  "scriptsInfo": {
+    "check-git-status": "Check if the Git working directory is clean",
+    "version": "Bump version, format files, add changes, push changes, and push tags"
   },
   "dependencies": {
     "prettier": "^3.2.5",
