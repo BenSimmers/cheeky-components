@@ -31,12 +31,8 @@
     "preview": "vite preview",
     "prepare": "npm run build",
     "prepublishOnly": "npm run lint && npm run build",
-    "preversion": "npm run lint && npm run check-git-status",
+    "preversion": "npm run lint",
     "version": "npm version patch"
-  },
-  "scriptsInfo": {
-    "check-git-status": "Check if the Git working directory is clean",
-    "version": "Bump version, format files, add changes, push changes, and push tags"
   },
   "dependencies": {
     "prettier": "^3.2.5",
