@@ -32,8 +32,9 @@
     "prepare": "npm run build",
     "prepublishOnly": "npm run lint && npm run build",
     "preversion": "npm run lint",
-    "version": "npm version patch",
-    "git-update": "git add . && git commit -m 'update version to ' && git push"
+    "git-update": "git add . && git commit -m 'update version' && git push",
+    "version": "npm publish && npm run git-update"
+
   },
   "dependencies": {
     "prettier": "^3.2.5",
