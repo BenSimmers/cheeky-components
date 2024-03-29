@@ -33,6 +33,7 @@
     "prepublishOnly": "npm run lint && npm run build",
     "preversion": "npm run lint",
     "git-update": "git add . && git commit -m 'update version' && git push",
+    "update-version": "npm version patch && npm run git-update",
     "version": "npm publish && npm run git-update"
 
   },
@@ -56,5 +57,10 @@
     "typescript": "^5.2.2",
     "vite": "^5.2.0",
     "vite-plugin-dts": "^3.7.3"
-  }
+  },
+  "keywords": [
+    "react",
+    "components",
+    "functional",
+    "tailwindcss"]
 }
