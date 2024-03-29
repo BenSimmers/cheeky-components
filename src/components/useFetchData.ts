@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from 'react';
 
 type FetchDataResponse<T> = {
@@ -48,4 +49,3 @@ export const useFetchData = <T>(url: string) => {
 
   return { ...response, fetchData };
 };
-

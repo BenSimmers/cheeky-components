@@ -13,7 +13,6 @@
       "require": "./dist/index.umd.js"
     }
   },
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/BenSimmers/cheeky-components"
@@ -27,11 +26,17 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "format": "prettier --write \"src/**/*.ts\"",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
     "prepare": "npm run build",
-    "preview": "vite preview"
+    "prepublishOnly": "npm run lint && npm run build",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "dependencies": {
+    "prettier": "^3.2.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
