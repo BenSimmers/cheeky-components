@@ -1,7 +1,7 @@
 {
   "name": "react-cheeky-components",
   "private": false,
-  "version": "0.0.9",
+  "version": "0.0.10",
   "license": "MIT",
   "type": "module",
   "main": "dist/index.umd.js",
@@ -35,7 +35,6 @@
     "git-update": "git add . && git commit -m 'update version' && git push",
     "update-version": "npm version patch && npm run git-update",
     "version": "npm publish && npm run git-update"
-
   },
   "dependencies": {
     "prettier": "^3.2.5",
@@ -62,5 +61,6 @@
     "react",
     "components",
     "functional",
-    "tailwindcss"]
+    "tailwindcss"
+  ]
 }
