@@ -1,7 +1,7 @@
 {
   "name": "react-cheeky-components",
   "private": false,
-  "version": "0.0.6",
+  "version": "0.0.7",
   "license": "MIT",
   "type": "module",
   "main": "dist/index.umd.js",
@@ -35,7 +35,6 @@
     "version": "npm run format && git add . && npm version patch && git push && git push --tags",
     "postversion": "",
     "check-git-status": "git diff --quiet && git diff --cached --quiet || (echo 'Git working directory not clean'; exit 1)"
-
   },
   "scriptsInfo": {
     "check-git-status": "Check if the Git working directory is clean",
