@@ -7,12 +7,12 @@
   "files": [
     "dist"
   ],
-  "main": "dist/react-cheeky-components-umd.cjs",
-  "module": "dist/react-cheeky-components.js",
+  "main": "dist/cheeky-components-react-umd.cjs",
+  "module": "dist/cheeky-components-react.js",
   "exports": {
     ".": {
-      "import": "./dist/react-cheeky-components.js",
-      "require": "./dist/react-cheeky-components-umd.cjs"
+      "import": "./dist/cheeky-components-react.js",
+      "require": "./dist/cheeky-components-react-umd.cjs"
     }
   },
   "repository": {
