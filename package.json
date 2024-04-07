@@ -4,24 +4,20 @@
   "version": "0.0.1",
   "license": "MIT",
   "type": "module",
+  "files": [
+    "dist"
+  ],
   "main": "dist/react-cheeky-components-umd.cjs",
   "module": "dist/react-cheeky-components.js",
-  "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.es.js",
-      "require": "./dist/index.umd.js"
+      "import": "./dist/react-cheeky-components.js",
+      "require": "./dist/react-cheeky-components-umd.cjs"
     }
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/BenSimmers/cheeky-components"
-  },
-  "files": [
-    "dist"
-  ],
-  "publishConfig": {
-    "access": "public"
   },
   "scripts": {
     "build": "tsc && vite build",
