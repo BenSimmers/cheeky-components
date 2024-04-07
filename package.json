@@ -9,6 +9,7 @@
   ],
   "main": "dist/cheeky-components-react-umd.cjs",
   "module": "dist/cheeky-components-react.js",
+  "types": "dist/cheeky-components-react.d.ts",
   "exports": {
     ".": {
       "import": "./dist/cheeky-components-react.js",
