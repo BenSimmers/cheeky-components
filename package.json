@@ -1,11 +1,11 @@
 {
-  "name": "react-cheeky-components",
+  "name": "cheeky-components",
   "private": false,
   "version": "0.0.10",
   "license": "MIT",
   "type": "module",
-  "main": "dist/index.umd.js",
-  "module": "dist/index.es.js",
+  "main": "dist/react-cheeky-components-umd.cjs",
+  "module": "dist/react-cheeky-components.js",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
@@ -24,38 +24,48 @@
     "access": "public"
   },
   "scripts": {
-    "dev": "vite",
     "build": "tsc && vite build",
-    "format": "prettier --write \"src/**/*.ts\"",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm run lint && npm run build",
-    "preversion": "npm run lint",
-    "git-update": "git add . && git commit -m 'update version' && git push",
-    "update-version": "npm version patch && npm run git-update",
-    "version": "npm publish && npm run git-update"
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
     "prettier": "^3.2.5",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "tailwind-merge": "^2.2.2"
   },
   "devDependencies": {
-    "@types/react": "^18.2.66",
-    "@types/react-dom": "^18.2.22",
-    "@typescript-eslint/eslint-plugin": "^7.2.0",
-    "@typescript-eslint/parser": "^7.2.0",
-    "@vitejs/plugin-react-swc": "^3.5.0",
-    "autoprefixer": "^10.4.19",
-    "eslint": "^8.57.0",
+    "@storybook/addon-essentials": "^7.6.4",
+    "@storybook/addon-interactions": "^7.6.4",
+    "@storybook/addon-links": "^7.6.4",
+    "@storybook/addon-onboarding": "^1.0.9",
+    "@storybook/blocks": "^7.6.4",
+    "@storybook/react": "^7.6.4",
+    "@storybook/react-vite": "^7.6.4",
+    "@storybook/test": "^7.6.4",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
+    "@vitejs/plugin-react": "^4.2.0",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.53.0",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.6",
-    "postcss": "^8.4.38",
-    "tailwindcss": "^3.4.1",
+    "eslint-plugin-react-refresh": "^0.4.4",
+    "eslint-plugin-storybook": "^0.6.15",
+    "postcss": "^8.4.32",
+    "storybook": "^7.6.4",
+    "tailwindcss": "^3.3.6",
     "typescript": "^5.2.2",
-    "vite": "^5.2.0",
-    "vite-plugin-dts": "^3.7.3"
+    "vite": "^5.0.0",
+    "vite-plugin-dts": "^3.6.4",
+    "vite-tsconfig-paths": "^4.2.2"
+  },
+  "resolutions": {
+    "jackspeak": "2.1.1"
   },
   "keywords": [
     "react",
